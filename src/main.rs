@@ -45,7 +45,7 @@ fn request_for_m3u8(url :&str) -> Vec<u8> {
 
 fn crossdomain_handler<'a> (_: &mut Request, mut res: Response<'a>) -> MiddlewareResult<'a> {
   let mut data = HashMap::<&str, &str>::new();
-  data.insert("host", "192.168.1.200:6767");
+  data.insert("host", "http://hd-serials.tv:6767");
   res.set(MediaType::Xml);
   res.render("app/views/crossdomain.tpl", &data)
 }
@@ -71,5 +71,5 @@ fn main() {
 
     server.get("/crossdomain.xml", crossdomain_handler);
 
-    server.listen("127.0.0.1:6767");
+    server.listen("0.0.0.0:6767");
 }
