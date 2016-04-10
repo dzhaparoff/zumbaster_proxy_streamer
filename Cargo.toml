@@ -1,0 +1,14 @@
+[package]
+name = "zumbaster-proxy-stream"
+version = "0.0.1"
+authors = ["Enver Dzhaparoff"]
+
+[dependencies.nickel]
+version = "*"
+
+[dependencies.hyper]
+version = "=0.8"
+default-features = false
+
+[dependencies.regex]
+version = "0.1"
